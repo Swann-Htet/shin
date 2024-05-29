@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Seri+Myanmar:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+@font-face {
+    font-family: MMfont;
+    src: url(../asset/fonts/Regular.ttf);
+}
+
+@keyframes lights {
+    0% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+    30% { 
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    40% { 
+      color: hsl(230, 100%, 95%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    70% {
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    100% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+  }
+  
+  body {
+    margin: 0;
+    color: hsl(230, 100%, 95%);
+    background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .letter {
+    padding: 10em;
+  }
+  
+  .eng {
+    font-family: Sofia Sans;
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+    animation: lights 5s 750ms linear infinite;
+    pointer-events: none;
+  }
+
+  .myan {
+    text-align: center;
+    font-family: MMfont;
+    letter-spacing: 2px;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 50px;
+    animation: lights 5s 750ms linear infinite;
+    pointer-events: none;
+  }
+
+  .back {
+    position: fixed;
+    top: 3%;
+    left: 2%;
+  }
+
+  .back button {
+    background-color: #00061E;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    line-height: 45px;
+    font-size: 1.7em;
+    color: #fff;
+    transition: all ease-in-out 0.5s;
+  }
+
+  .back button:hover {
+    background-color: #fff;
+    outline: none;
+    border: 2px solid #00061E;
+    border-radius: 50%;
+    width: 50px;
+    height: 50%;
+    cursor: pointer;
+    line-height: 45px;
+    font-size: 1.7em;
+    color: #000;
+  }
+
+  @media screen and (max-width: 992px) {
+    body {
+        margin: 0;
+        color: hsl(230, 100%, 95%);
+        background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    .letter {
+        padding: 3em;
+        margin: 2em;
+    }
+    .eng {
+        margin: auto;
+        font-size: 2rem;
+        animation: lights 5s 750ms linear infinite;
+      }
+      .myn {
+        margin: auto;
+        font-size: 0.8rem;
+        line-height: 30px;
+        letter-spacing: 0px;
+        animation: lights 5s 750ms linear infinite;
+      }
+
+      .back {
+        position: fixed;
+        top: 3%;
+        left: 4%;
+      }
+  
+      .back button {
+        background-color: #00061E;
+        outline: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        line-height:25px;
+        font-size: 1em;
+        color: #fff;
+        transition: all ease-in-out 0.5s;
+      }
+  }

@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
+@font-face {
+    font-family: Aspekta;
+    src: url(../asset/fonts/SofiaSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: AspektaSemi;
+    src: url(../fonts/Aspekta-600.ttf);
+}
+@font-face {
+    font-family: AspektaBold;
+    src: url(../fonts/Aspekta-900.ttf);
+}
+@font-face {
+    font-family: SofiaRegualr;
+    src: url(../asset/fonts/SofiaSans-Regular.ttf);
+}
+@font-face {
+    font-family: SofiaSemi;
+    src: url(../asset/fonts/SofiaSans-SemiBold.ttf);
+}
+
+*{
+    font-family: SofiaRegualr;
+}
+
+body {
+    background: url(../Images/BG.gif);
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    font-family: Sofia Sans;
+    margin: 0;
+    background-color: #000; /* Background color */
+    color: #fff; /* Text color */
+    font-family: Arial, sans-serif; /* Font family */
+}
+#container {
+    text-align: center;
+    font-size: 2em;
+    z-index: 1;
+}
+#countdown {
+    font-family: Sofia Sans;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    margin-bottom: 20px;
+}
+#button {
+    display: none;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px; /* Rounded corners */
+}
+#greeting {
+    font-size: 30px;
+    margin-bottom: 20px; /* Spacing between the text and the button */
+}
+a {
+    text-decoration: none;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000009A;
+}
+
+@media (max-width: 442px) {
+    #countdown {
+        font-family: Sofia Sans;
+        font-size: 0.8em;
+    }
+}
