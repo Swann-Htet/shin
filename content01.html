@@ -33,7 +33,274 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="CSS/style01.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
+:root {
+    --primary-color: #CF0A0A;
+    --secondary-color: #EEEEEE;
+    --third-color: #000000;
+    --fourth-color: #DC5F00;
+}
+
+section {
+    height: 100vh;
+}
+
+body {
+    font-family: Sofia Sans;
+}
+
+/* Animation */
+
+   
+   @keyframes infinity-load {
+    to {
+     stroke-dashoffset: 10
+    }
+   }
+  
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: var(--secondary-color); 
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: var(--fourth-color); 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color); 
+}
+
+/* Owl Carousel */
+.ow-l, .ow-r {
+    display: none;
+}
+.owl-nav {
+    display: block;
+    position: absolute;
+}
+
+/* Top-Navbar */
+.top-navbar-velp  {
+    background: var(--primary-color)
+}
+.top-navbar-velp img {
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    margin: 0.5em;
+}
+.top-navbar-velp .container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.top-navbar-velp .container ul li{
+    display: inline;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color) !important;
+    font-family: Sofia Sans;
+    font-size: 1.1em;
+}
+.navbar .nav-link {
+    color: var(--secondary-color) !important;
+    transition: all ease-in-out 0.3s;
+}
+.navbar .nav-link:hover {
+    color: var(--third-color) !important;
+}
+.navbar .active {
+    color: var(--third-color);
+}
+
+/* Home */
+#home {
+    font-family: Sofia Sans;
+    cursor: pointer;
+}
+#home .title{
+    color: var(--secondary-color)
+}
+#home img {
+    height: 300px;
+    object-fit: cover;
+    transition: all ease-in-out 0.3s;
+}
+#home .home-slider:hover img {
+    transform: scale(1.1);
+}
+
+/* Home Main */
+#home-main {
+    background-image: url(Images/BG.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+#home-main .overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0000009A;
+}
+#home-main .brand-logo {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+}
+#home-main .title {
+    margin-top: 6em;
+    text-align: center;
+    color: var(--secondary-color);
+}
+  
+
+
+
+/* heart beat */
+.heartbeatloader {
+    position: absolute;
+    width: 10vmin;
+    height: 10vmin;
+    z-index: -2;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .svgdraw {
+    top: 30%;
+    left: 26%;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    color: #fff;
+    transform: scale(1.4);
+    z-index: 3;
+  }
+  
+  .path {
+    stroke: rgba(255, 255, 255, 0.95);
+    stroke-width: 4;
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 1000px;
+    animation: draw 1.5s infinite forwards normal linear;
+    animation-delay: 0.1s;
+    position: relative;
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .innercircle {
+    position: absolute;
+    top: 17%;
+    left: 100.5%;
+    transform: translate(-50%, -50%) scale(1.2);
+    width: 160%;
+    height: auto;
+    z-index: 1;
+    opacity: 0.97;
+    animation: innerbeat 1.5s infinite linear forwards;
+  }
+  
+  .innercircle:before,
+  .innercircle:after {
+    position: absolute;
+    content: "";
+    left: 25%;
+    top: 0;
+    width: 25%;
+    height: auto;
+    padding-bottom: 40%;
+    background: rgb(225, 95, 95);
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  .innercircle:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+  @keyframes innerbeat {
+    0% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  
+    10% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  
+    50% {
+      transform: translate(-50%, -50%) scale(1.3);
+    }
+  
+    60% {
+      transform: translate(-50%, -50%) scale(1.25);
+    }
+  
+    75% {
+      transform: translate(-50%, -50%) scale(1.3);
+    }
+  }
+  
+  .outercircle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(238, 92, 92, 0.9);
+    box-shadow: 0 0 30px 0px #fff;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    transform: scale(1.2);
+    animation: outerbeat 1.5s infinite linear forwards;
+  }
+  
+  @keyframes outerbeat {
+    0% {
+      transform: scale(1.2);
+    }
+  
+    10% {
+      transform: scale(1.2);
+    }
+  
+    50% {
+      transform: scale(1.3);
+    }
+  
+    60% {
+      transform: scale(1.25);
+    }
+  
+    75% {
+      transform: scale(1.3);
+    }
+  }
+    </style>
+
+
 </head>
 <body>
       <div id="home">
@@ -174,6 +441,7 @@
         </div>
     </div>
 
+
     
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
@@ -237,7 +505,48 @@
     <script src="./libs/jquery/jquery.min.js"></script>
     <script src="./libs/mdbs/mdb.min.js"></script>
     <script src="./libs/owl/owl.carousel.min.js"></script>
-    <script src="./js/velp.js"></script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 171.19 || document.documentElement.scrollTop > 171.19) {
+        $("#navbar").addClass("fixed-top");
+        $(".content").addClass("m-41");
+  } else {
+        $("#navbar").removeClass("fixed-top");
+        $(".content").removeClass("m-41");
+  }
+}
+
+// Home Slider
+// $(document).ready(function(){
+//       $(".owl-carousel").owlCarousel();
+// });
+$('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      loop:true,
+      nav:true,
+        navText : ["<i class='fa fa-chevron-circle-left me-2 ow-l'></i>","<i class='fa fa-chevron-circle-right ms-2 ow-r'></i>"],
+      dots: false,
+      autoplay:true,
+      autoplayTimeout: 1500,
+      autoplayHoverPause:true,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+          },
+          600:{
+              items:2
+          },
+          1000:{
+              items:3,
+              nav:true,
+          }
+      }
+  })
+    </script>
     
 </body>
 </html>
